@@ -77,9 +77,9 @@ kết quả là bạn dừng xe trước vạch kẻ (Đưa ra kết quả).
 
 `,
 
-    practiceRoute: "/practice/2",
+    practiceRoute: "/practice/3",
 
-    quizRoute: "/quiz/2"
+    quizRoute: "/quiz/3"
 
   },
 
