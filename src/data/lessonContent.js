@@ -85,7 +85,7 @@ kết quả là bạn dừng xe trước vạch kẻ (Đưa ra kết quả).
 
 3:{
 
-    title: "Bài 2. Xử lí thông tin",
+    title: "Bài 3.Máy tính và em",
     video:
       "https://www.youtube.com/embed/4pRkVhDGeig",
 
