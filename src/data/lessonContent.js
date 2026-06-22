@@ -81,9 +81,43 @@ kết quả là bạn dừng xe trước vạch kẻ (Đưa ra kết quả).
 
     quizRoute: "/quiz/2"
 
+  },
+
+3:{
+
+    title: "Bài 2. Xử lí thông tin",
+    video:
+      "https://www.youtube.com/embed/4pRkVhDGeig",
+
+    image:
+      "/images/bai2.jpg",
+
+    objectives: [
+
+      "Hiểu cách bộ não con người và máy tính tiếp nhận, xử lí thông tin để đưa ra quyết định.",
+      "Quá trình xử lí thông tin bao gồm 3 bước cơ bản."
+
+    ],
+
+    theory: `
+<h3>📌 1. Quá trình xử lí thông tin</h3>
+<p>Quá trình xử lí thông tin bao gồm 3 bước cơ bản liên tiếp nhau:</p>
+• <b>Bước 1: Thu nhận thông tin: </b> Dùng các giác quan (mắt, tai, mũi, v.v.) để thu nhận thông tin từ thế giới bên ngoài.</li>
+• <b>Bước 2: Xử lí thông tin (Suy nghĩ và phân tích): </b> Bộ não tiếp nhận, suy nghĩ, phân tích và đưa ra đánh giá dựa trên thông tin vừa thu nhận.</li>
+• <b>Bước 3: Đưa ra kết quả (Đưa ra quyết định/hành động): </b>Ghi nhớ thông tin hoặc đưa ra hành động, quyết định phản hồi lại.</li>
+
+<h3>📌 2. Ví dụ thực tế</h3>
+🚦 Con người: Khi đang đi trên đường và thấy đèn giao thông chuyển sang màu đỏ (Thu nhận), bộ não phân tích đèn đỏ là phải dừng lại (Xử lí), 
+kết quả là bạn dừng xe trước vạch kẻ (Đưa ra kết quả).
+💻 Máy tính: Nhận tín hiệu bấm nút chuột (Thu nhận), bộ não máy tính (CPU) xử lí lệnh (Xử lí), và hiển thị kết quả mở ứng dụng lên màn hình (Đưa ra kết quả).
+
+`,
+
+    practiceRoute: "/practice/2",
+
+    quizRoute: "/quiz/2"
+
   }
-
-
 
 };
 
