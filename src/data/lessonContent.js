@@ -51,7 +51,7 @@ Hằng ngày em nhận được thông tin thông qua mắt, tai, mũi, lưỡi 
 
     title: "Bài 2. Xử lí thông tin",
     video:
-      "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "https://www.youtube.com/embed/4pRkVhDGeig",
 
     image:
       "/images/bai2.jpg",
