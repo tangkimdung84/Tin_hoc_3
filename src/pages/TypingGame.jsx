@@ -129,6 +129,11 @@ function TypingGame() {
 
   function endGame() {
 
+  if (!gameOver) {
+      const audioGameOver = new Audio(`${import.meta.env.BASE_URL}over.mp3`);
+      audioGameOver.play().catch(err => console.log("Lỗi nhạc kết thúc gõ phím:", err));
+    }
+
     setGameOver(true);
 
     if (score > highScore) {
@@ -148,7 +153,14 @@ function TypingGame() {
 
     function handleKey(e) {
 
-      if (gameOver) return;
+      if (gameOver){
+
+
+      return;
+
+      }
+
+
 
       const key =
         e.key.toUpperCase();
@@ -171,13 +183,13 @@ function TypingGame() {
 
 setMessage("✅ Chính xác!");
 
-  const audio =
-    new Audio(
-      "assets/button-09a.mp3"
-    );
+ // 🎵 PHÁT ÂM THANH ĐÚNG: Gọi file dung.mp3 trong thư mục public
+      const audioDung = new Audio(`${import.meta.env.BASE_URL}dungphim.mp3`);
+      audioDung.play().catch(err => console.log("Lỗi phát âm thanh:", err));
 
 
-  audio.play();
+
+
 
   setScore((prev) =>
     prev +
@@ -204,6 +216,11 @@ const hasCorrect =
 if (!hasCorrect) {
 
   setMessage("❌ Sai rồi!");
+// 🎵 PHÁT ÂM THANH SAI: Gọi file sai.mp3 trong thư mục public
+      const audioSai = new Audio(`${import.meta.env.BASE_URL}sai1.mp3`);
+      audioSai.play().catch(err => console.log("Lỗi phát âm thanh:", err));
+
+
 
 }
 
@@ -356,6 +373,7 @@ if (!hasCorrect) {
       ) : (
 
         <div className="typing-ultra-over">
+
 
           <h2>🎉 GAME OVER</h2>
 
