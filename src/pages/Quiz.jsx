@@ -57,9 +57,20 @@ function Quiz() {
 
     setMessage("✅ Chính xác");
 
+// 🎵 PHÁT ÂM THANH ĐÚNG: Gọi file dung.mp3 trong thư mục public
+      const audioDung = new Audio(`${import.meta.env.BASE_URL}dung.mp3`);
+      audioDung.play().catch(err => console.log("Lỗi phát âm thanh:", err));
+
+
+
   }else{
 
     setMessage("❌ Chưa chính xác");
+// 🎵 PHÁT ÂM THANH SAI: Gọi file sai.mp3 trong thư mục public
+      const audioSai = new Audio(`${import.meta.env.BASE_URL}sai.mp3`);
+      audioSai.play().catch(err => console.log("Lỗi phát âm thanh:", err));
+
+
 
   }
 
@@ -100,6 +111,10 @@ function Quiz() {
           score
         );
       }
+
+// 🎵 PHÁT ÂM THANH GAME OVER KHI KẾT THÚC BÀI
+        const audioGameOver = new Audio(`${import.meta.env.BASE_URL}over.mp3`);
+        audioGameOver.play().catch(err => console.log("Lỗi nhạc kết thúc:", err));
 
       setShowResult(true);
     }
