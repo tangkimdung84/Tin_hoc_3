@@ -100,6 +100,11 @@ function MouseGame() {
 
   function endGame() {
 
+    if (!gameOver) {
+      const audioGameOver = new Audio(`${import.meta.env.BASE_URL}over.mp3`);
+      audioGameOver.play().catch(err => console.log("Lỗi nhạc kết thúc gõ phím:", err));
+    }
+
     setGameOver(true);
 
     if (score > highScore) {
@@ -118,13 +123,10 @@ function MouseGame() {
   function popBalloon(balloon) {
 
     if (gameOver) return;
-
-    const audio = new Audio(
-      "https://www.soundjay.com/buttons/sounds/button-16.mp3"
-    );
-
-    audio.play();
-
+    
+      const audioGameOver = new Audio(`${import.meta.env.BASE_URL}chondung.mp3`);
+      audioGameOver.play().catch(err => console.log("Lỗi nhạc kết thúc gõ phím:", err));
+    
     const newScore =
       score + balloon.point * combo;
 
