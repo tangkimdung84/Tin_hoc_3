@@ -2177,7 +2177,7 @@ display:none;
 /* Menu nằm hàng đầu */
 
 .menu{
-
+width:100%;
 display:flex;
 gap:2px;
 flex-wrap:nowrap;
