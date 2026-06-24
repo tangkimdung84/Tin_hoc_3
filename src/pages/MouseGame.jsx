@@ -2,29 +2,6 @@ import { useEffect, useState } from "react";
 import Navbar
 from "../components/Navbar";
 
-function restartGame() {
-
-  setScore(0);
-
-  setCombo(1);
-
-  setTime(60);
-
-  setLife(5);
-
-  setLevel(1);
-
-  setGameOver(false);
-
-  const arr = [];
-
-  for (let i = 0; i < 5; i++) {
-    arr.push(createBalloon());
-  }
-
-  setBalloons(arr);
-}
-
 function MouseGame() {
 
   const [balloons, setBalloons] = useState([]);
@@ -263,9 +240,13 @@ function MouseGame() {
 
           <h2>🏆 High Score: {highScore}</h2>
 
-         <button onClick={restartGame}>
-  🔄 Chơi lại
-</button>
+          <button
+            onClick={() =>
+              window.location.reload()
+            }
+          >
+            🔄 Chơi lại
+          </button>
 
         </div>
 
