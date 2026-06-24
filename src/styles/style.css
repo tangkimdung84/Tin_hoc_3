@@ -2179,7 +2179,7 @@ display:none;
 .menu{
 width:100%;
 display:flex;
-gap:2px;
+gap:40px;
 flex-wrap:nowrap;
 justify-content:space-evenly;
 padding:0px 0px;
