@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tin học 3 - Thành tích học tập</title>
+
+    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/achievements.css">
+
+    <script src="js/achievements.js" defer></script><link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/achievements.css">
+</head>
+
+<body class="achievements-page">
+
+    <!-- THANH ĐẦU TRANG -->
+<header class="home-header">
+
+    <a href="home.html" class="home-brand">
+        <div class="home-logo">💻</div>
+
+        <div>
+            <h1>TIN HỌC 3</h1>
+            <p>HỌC VUI MỖI NGÀY</p>
+        </div>
+    </a>
+
+    <div class="header-student">
+        <div class="student-avatar">👧🏻</div>
+
+        <div class="student-header-info">
+            <span>Xin chào!</span>
+            <strong id="headerStudentName">Bạn nhỏ</strong>
+        </div>
+
+        <a href="home.html" class="change-student-btn"
+           style="text-decoration: none;">
+            Trang chủ
+        </a>
+    </div>
+
+</header>
+
+
+    <main class="achievements-main">
+
+        <!-- TIÊU ĐỀ -->
+        <section class="achievements-hero">
+            <h2>🏆 BẢNG THÀNH TÍCH CỦA EM</h2>
+            <p>Cùng nhìn lại hành trình chinh phục Tin học nhé!</p>
+            <a href="home.html" class="back-home-btn">
+                ← Quay về trang chủ
+            </a>
+        </section>
+
+        <!-- THỐNG KÊ -->
+        <section class="achievement-stats">
+
+            <div class="achievement-stat-card">
+                <span>⭐</span>
+                <p>Tổng kinh nghiệm</p>
+                <strong id="totalXP">0 XP</strong>
+            </div>
+
+            <div class="achievement-stat-card">
+                <span>📚</span>
+                <p>Bài đã luyện tập</p>
+                <strong id="totalPracticed">0 bài</strong>
+            </div>
+
+            <div class="achievement-stat-card">
+                <span>🏅</span>
+                <p>Huy chương đạt được</p>
+                <strong id="totalBadges">0</strong>
+            </div>
+
+            <div class="achievement-stat-card">
+                <span>🎯</span>
+                <p>Cấp độ hiện tại</p>
+                <strong id="currentLevel">Cấp 1</strong>
+            </div>
+
+        </section>
+
+        <!-- HUY CHƯƠNG -->
+        <section class="achievement-panel">
+            <h2>🥇 Huy chương của em</h2>
+            <div id="achievementBadges" class="achievement-badges">
+                <!-- JavaScript tạo huy chương tại đây -->
+            </div>
+        </section>
+
+        
+        </section>
+
+        <!-- TIẾN ĐỘ 16 BÀI HỌC -->
+        <section class="achievement-panel">
+
+            <h2>📚 Hành trình chinh phục 16 bài học</h2>
+
+            <div class="lesson-progress-summary">
+                <div>
+                    <strong id="lessonProgressText">0/16 bài</strong>
+                    <p>Bài đã luyện tập</p>
+                </div>
+
+                <div class="lesson-progress-bar">
+                    <div id="lessonProgressFill"></div>
+                </div>
+            </div>
+
+            <div id="lessonProgressList"
+                 class="lesson-progress-list">
+                <!-- JavaScript tạo danh sách bài học -->
+            </div>
+
+        </section>
+<!-- BIỂU ĐỒ KẾT QUẢ HỌC TẬP -->
+<section class="achievement-panel">
+
+    <h2>📈 Biểu đồ kết quả học tập</h2>
+
+    <p class="chart-description">
+        Cùng nhìn lại kết quả luyện tập của em nhé!
+    </p>
+
+    <div class="practice-chart">
+
+        <div class="chart-item">
+            <div class="chart-label">
+                <span>✅ Câu trả lời đúng</span>
+                <strong id="chartCorrect">0</strong>
+            </div>
+
+            <div class="chart-track">
+                <div
+                    class="chart-bar correct-bar"
+                    id="correctBar">
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-item">
+            <div class="chart-label">
+                <span>❌ Câu trả lời chưa đúng</span>
+                <strong id="chartWrong">0</strong>
+            </div>
+
+            <div class="chart-track">
+                <div
+                    class="chart-bar wrong-bar"
+                    id="wrongBar">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="chart-message" id="chartMessage">
+        🌟 Hãy luyện tập để xem kết quả của em nhé!
+    </div>
+
+</section>		
+		
+		
+
+        <!-- LỊCH SỬ LUYỆN TẬP -->
+<section class="achievement-panel">
+
+    <h2>📚 Lịch sử luyện tập</h2>
+
+    <p class="chart-description">
+        Xem lại những lần em đã thử sức với các bài học nhé!
+    </p>
+
+    <div id="practiceHistory" class="practice-history">
+
+        <!-- Lịch sử được tạo tự động bằng JavaScript -->
+
+    </div>
+
+</section>
+
+
+<!-- THỐNG KÊ KẾT QUẢ LUYỆN TẬP -->
+<section class="achievement-panel">
+
+    <h2>📊 Thống kê kết quả luyện tập</h2>
+
+    <div class="practice-stat-grid">
+
+        <div class="practice-stat-card">
+            <span>🔄</span>
+            <p>Tổng lượt luyện tập</p>
+            <strong id="totalAttempts">0</strong>
+        </div>
+
+        <div class="practice-stat-card">
+            <span>📝</span>
+            <p>Tổng câu đã trả lời</p>
+            <strong id="totalQuestions">0</strong>
+        </div>
+
+        <div class="practice-stat-card">
+            <span>✅</span>
+            <p>Tổng câu trả lời đúng</p>
+            <strong id="totalCorrect">0</strong>
+        </div>
+
+        <div class="practice-stat-card">
+            <span>🎯</span>
+            <p>Tỉ lệ trả lời đúng</p>
+            <strong id="accuracyRate">0%</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+    </main>
+
+    <!-- CHÂN TRANG -->
+    <footer class="home-footer">
+        <p>💙 TIN HỌC 3 – HỌC VUI MỖI NGÀY 💙</p>
+    </footer>
+
+
+
+
+<!-- CỬA SỔ XEM CHI TIẾT KẾT QUẢ -->
+<div id="detailModal" class="detail-modal" hidden>
+
+    <div class="detail-modal-content">
+
+        <button
+            type="button"
+            id="closeDetailModal"
+            class="close-detail-btn">
+            ✖
+        </button>
+
+        <h2>📊 Kết quả luyện tập</h2>
+
+        <div id="detailContent">
+            <!-- Nội dung được tạo bằng JavaScript -->
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

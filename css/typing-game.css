@@ -1,0 +1,673 @@
+
+/* =================================
+   TRÒ CHƠI THỬ TÀI GÕ PHÍM
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+    color: #28445f;
+}
+
+.typing-header {
+    padding: 30px 15px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #1976d2, #42a5f5);
+    box-shadow: 0 4px 12px #0002;
+}
+
+.typing-header h1 {
+    margin: 0 0 10px;
+    font-size: 32px;
+}
+
+.typing-header p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.typing-container {
+    width: min(95%, 950px);
+    margin: 30px auto;
+}
+
+.typing-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    padding: 18px 10px;
+    text-align: center;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px #0001;
+}
+
+.stat-card span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #567;
+}
+
+.stat-card strong {
+    font-size: 28px;
+    color: #1976d2;
+}
+
+.typing-game-box {
+    padding: 30px 20px;
+    text-align: center;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 6px 20px #0002;
+}
+
+.typing-game-box h2 {
+    color: #1565c0;
+}
+
+.typing-word {
+    margin: 25px auto;
+    padding: 25px 15px;
+    background: #fff3cd;
+    border: 3px dashed #ffb300;
+    border-radius: 18px;
+    color: #e65100;
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+#typingInput {
+    width: min(100%, 500px);
+    padding: 16px;
+    border: 3px solid #90caf9;
+    border-radius: 15px;
+    outline: none;
+    font-size: 24px;
+    text-align: center;
+}
+
+#typingInput:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 8px #90caf9;
+}
+
+#typingInput:disabled {
+    background: #eeeeee;
+}
+
+#typingMessage {
+    min-height: 30px;
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #287a45;
+}
+
+.typing-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.typing-controls button,
+.typing-finish button {
+    padding: 14px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #1976d2;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.typing-controls button:hover,
+.typing-finish button:hover {
+    background: #0d47a1;
+    transform: translateY(-2px);
+}
+
+#typingBackButton {
+    background: #78909c;
+}
+
+.typing-finish {
+    margin-top: 25px;
+    padding: 30px 20px;
+    text-align: center;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 6px 20px #0002;
+}
+
+.typing-trophy {
+    font-size: 70px;
+}
+
+.typing-finish h2 {
+    color: #e69500;
+}
+
+.typing-finish p {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .typing-header h1 {
+        font-size: 25px;
+    }
+
+    .typing-stats {
+        gap: 8px;
+    }
+
+    .stat-card {
+        padding: 14px 5px;
+    }
+
+    .stat-card span {
+        font-size: 13px;
+    }
+
+    .stat-card strong {
+        font-size: 23px;
+    }
+
+    .typing-word {
+        font-size: 30px;
+    }
+
+    #typingInput {
+        font-size: 20px;
+    }
+}
+
+
+/* =================================
+   PHÁO HOA CHÚC MỪNG
+================================= */
+
+.typing-finish {
+    position: relative;
+    overflow: hidden;
+}
+
+.typing-fireworks {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.typing-finish > *:not(.typing-fireworks) {
+    position: relative;
+    z-index: 2;
+}
+
+.typing-firework-particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: typingFirework 1.5s ease-out forwards;
+}
+
+@keyframes typingFirework {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translate(var(--move-x), var(--move-y))
+            scale(0.1);
+        opacity: 0;
+    }
+}
+
+.typing-trophy {
+    animation: typingTrophy 1s ease-in-out infinite alternate;
+}
+
+@keyframes typingTrophy {
+    from {
+        transform: scale(1) rotate(-5deg);
+    }
+
+    to {
+        transform: scale(1.2) rotate(5deg);
+    }
+}
+
+
+/* HỘP THOẠI CHÚC MỪNG GIỮA MÀN HÌNH */
+
+.typing-finish[hidden] {
+    display: none !important;
+}
+
+.typing-finish:not([hidden]) {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+
+    width: min(90%, 550px);
+    max-height: 85vh;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 35px 25px;
+
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* LỚP NỀN MỜ PHÍA SAU HỘP THOẠI */
+
+body:has(#typingFinish:not([hidden]))::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(20, 35, 70, 0.65);
+}
+
+
+/* =====================================
+   KHU VỰC CHỌN TRÒ CHƠI
+===================================== */
+
+.typing-game-menu {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.typing-menu-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.typing-menu-card {
+    width: 240px;
+    min-height: 170px;
+    padding: 20px;
+    border: 3px solid #b8dcff;
+    border-radius: 22px;
+    background: linear-gradient(145deg, #ffffff, #e5f4ff);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.25s;
+}
+
+.typing-menu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 100, 200, 0.2);
+}
+
+.typing-menu-card span {
+    font-size: 42px;
+}
+
+.typing-menu-card strong {
+    font-size: 20px;
+    color: #1765a5;
+}
+
+.typing-menu-card small {
+    color: #555;
+    font-size: 14px;
+}
+
+/* =====================================
+   TRÒ CHƠI SĂN CHỮ TRONG MÂY
+===================================== */
+
+.cloud-typing-area {
+	position: relative;
+    text-align: center;
+    background: #eaf7ff;
+    border-radius: 22px;
+    padding: 22px;
+    margin-top: 20px;
+}
+
+.cloud-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 15px;
+    font-size: 20px;
+}
+
+.cloud-game-board {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    background: linear-gradient(#8ed8ff, #e4f8ff);
+    border: 3px solid #71c6f3;
+    border-radius: 20px;
+}
+
+.cloud-instruction {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    color: #1765a5;
+    font-weight: bold;
+}
+
+#cloudTypingInput {
+    width: min(90%, 350px);
+    padding: 14px;
+    margin: 18px auto;
+    border: 3px solid #80c9f5;
+    border-radius: 15px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.cloud-finish {
+    position: absolute;
+    z-index: 20;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+    max-width: 420px;
+    padding: 25px 20px;
+
+    background: linear-gradient(145deg, #fff9df, #ffe9a8);
+    border: 4px solid #ffca55;
+    border-radius: 25px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.cloud-finish h2 {
+    color: #e58a00;
+    font-size: 26px;
+}
+
+.cloud-finish p {
+    font-size: 19px;
+    font-weight: bold;
+    color: #555;
+}
+
+.cloud-finish button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 15px;
+    background: #ff9800;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .typing-menu-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .typing-menu-card {
+        width: 90%;
+    }
+
+    .cloud-game-board {
+        height: 350px;
+    }
+
+    .cloud-stats {
+        gap: 12px;
+        font-size: 16px;
+    }
+}
+
+
+/* =====================================
+   ĐÁM MÂY CHỨA CHỮ CÁI
+===================================== */
+
+.falling-cloud {
+    position: absolute;
+    top: -90px;
+    width: 90px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    z-index: 2;
+    animation: cloudFall linear forwards;
+}
+
+/* HÌNH ĐÁM MÂY */
+.falling-cloud::before {
+    content: "";
+    position: absolute;
+    width: 85px;
+    height: 35px;
+    bottom: 5px;
+    left: 2px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 80, 130, 0.15);
+}
+
+.falling-cloud::after {
+    content: "";
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    top: 5px;
+    left: 15px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 25px -8px 0 3px white;
+}
+
+.falling-cloud span {
+    position: relative;
+    z-index: 3;
+    font-size: 27px;
+    font-weight: bold;
+    color: #1675c5;
+    text-shadow: 0 1px 2px #d8efff;
+}
+
+/* CHUYỂN ĐỘNG RƠI */
+@keyframes cloudFall {
+    from {
+        top: -90px;
+    }
+
+    to {
+        top: 450px;
+    }
+}
+
+/* PHÁO HOA CHÚC MỪNG SĂN CHỮ */
+.cloud-fireworks {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 10001;
+    border: 3px solid red;
+    background: rgba(255, 0, 0, 0.05);
+}
+
+.cloud-finish h2,
+.cloud-finish p,
+.cloud-finish button {
+    position: relative;
+    z-index: 3;
+}
+
+.cloud-firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 2;
+
+    animation: cloudFirework 1.4s ease-out forwards;
+}
+
+@keyframes cloudFirework {
+    0% {
+        transform: scale(0.2);
+        opacity: 1;
+        box-shadow:
+            0 0 5px 3px currentColor;
+    }
+
+    30% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow:
+            0 -35px 0 2px currentColor,
+            25px -25px 0 2px currentColor,
+            35px 0 0 2px currentColor,
+            25px 25px 0 2px currentColor,
+            0 35px 0 2px currentColor,
+            -25px 25px 0 2px currentColor,
+            -35px 0 0 2px currentColor,
+            -25px -25px 0 2px currentColor;
+    }
+
+    100% {
+        transform: scale(0.5);
+        opacity: 0;
+        box-shadow:
+            0 -75px 0 1px currentColor,
+            53px -53px 0 1px currentColor,
+            75px 0 0 1px currentColor,
+            53px 53px 0 1px currentColor,
+            0 75px 0 1px currentColor,
+            -53px 53px 0 1px currentColor,
+            -75px 0 0 1px currentColor,
+            -53px -53px 0 1px currentColor;
+    }
+}
+
+/* =================================
+   THANH ĐẦU TRANG - THỬ TÀI GÕ PHÍM
+================================= */
+
+.typing-header {
+    padding: 18px 5%;
+    background: linear-gradient(135deg, #1565c0, #42a5f5);
+    color: white;
+    box-shadow: 0 4px 12px #0002;
+}
+
+.typing-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.typing-logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.typing-user {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-size: 16px;
+}
+
+.typing-xp {
+    padding: 9px 15px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+}
+
+/* Tiêu đề và nút trang chủ cùng hàng */
+.typing-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.typing-home-btn {
+    display: inline-block;
+    padding: 9px 16px;
+    background: white;
+    color: #1976d2;
+    border: 2px solid #90caf9;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.typing-home-btn:hover {
+    background: #1976d2;
+    color: white;
+}
+
+.typing-home-link a:hover {
+    background: #1976d2;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .typing-header-content {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .typing-user {
+        justify-content: center;
+    }
+
+    .typing-logo {
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vui cùng chuột máy tính - Tin học 3</title>
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/mouse.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="mouse-header">
+        <div class="mouse-header-content">
+
+            <div class="mouse-logo">
+                🖱️ Vui cùng chuột máy tính
+            </div>
+
+            <div class="mouse-user">
+                <span id="mouseStudentName">Xin chào, bạn nhỏ!</span>
+                <span class="mouse-xp">
+                    ⭐ <strong id="mouseTotalXP">0 XP</strong>
+                </span>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- NỘI DUNG CHÍNH -->
+    <main class="mouse-main">
+
+        <section class="mouse-intro">
+            <h1>🌈 Cùng khám phá thế giới chuột máy tính!</h1>
+
+            <p>
+                Hãy chọn trò chơi và luyện tập thật vui nhé!
+            </p>
+        </section>
+
+
+        <!-- DANH SÁCH TRÒ CHƠI -->
+        <section class="mouse-games">
+
+            <div class="mouse-game-card">
+                <div class="mouse-game-icon">👆</div>
+                <h2>Bé tập nháy chuột</h2>
+                <p>Luyện thao tác nhấn chuột trái một lần.</p>
+                <button class="mouse-start-button" data-game="click">
+                    Chơi ngay
+                </button>
+            </div>
+
+            <div class="mouse-game-card">
+                <div class="mouse-game-icon">⚡</div>
+                <h2>Thử tài nháy đúp</h2>
+                <p>Luyện thao tác nhấn chuột trái hai lần nhanh.</p>
+                <button class="mouse-start-button" data-game="double">
+                    Chơi ngay
+                </button>
+            </div>
+
+            <div class="mouse-game-card">
+                <div class="mouse-game-icon">🖱️</div>
+                <h2>Nhà khám phá chuột phải</h2>
+                <p>Khám phá thao tác nhấn chuột phải.</p>
+                <button class="mouse-start-button" data-game="right">
+                    Chơi ngay
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- KHU VỰC TRÒ CHƠI NHÁY CHUỘT -->
+        <section class="mouse-play-area" id="clickGameArea" hidden>
+
+            <div class="mouse-play-heading">
+                <h2>🎯 Bé tập nháy chuột</h2>
+                <p>Hãy nhấn chuột trái vào các mục tiêu thật nhanh!</p>
+            </div>
+
+            <!-- BẢNG ĐIỂM -->
+            <div class="mouse-score-board">
+
+                <div class="mouse-score-item">
+                    <span>⏱️ Thời gian</span>
+                    <strong id="clickTimer">60</strong>
+                </div>
+
+                <div class="mouse-score-item">
+                    <span>⭐ Điểm số</span>
+                    <strong id="clickScore">0</strong>
+                </div>
+
+                <div class="mouse-score-item">
+                    <span>🎯 Mục tiêu</span>
+                    <strong id="clickHits">0</strong>
+                </div>
+
+            </div>
+
+            <!-- MÀN HÌNH CHƠI -->
+            <div class="mouse-play-field" id="clickPlayField">
+
+                <div class="mouse-play-message" id="clickMessage">
+                    Sẵn sàng thử tài chưa nào?
+                </div>
+
+               <div class="falling-objects" id="fallingObjects"></div>
+			   
+			   
+
+            </div>
+
+            <!-- NÚT ĐIỀU KHIỂN -->
+            <div class="mouse-play-controls">
+
+                <button
+                    type="button"
+                    id="clickStartButton"
+                    class="mouse-start-button">
+                    🚀 Bắt đầu
+                </button>
+
+                <button
+                    type="button"
+                    id="clickBackButton"
+                    class="mouse-secondary-button">
+                    ← Chọn trò chơi khác
+                </button>
+
+            </div>
+
+            <!-- KẾT QUẢ -->
+            <div class="mouse-finish-panel" id="clickFinishPanel" hidden>
+			<div class="fireworks" id="clickFireworks"></div>
+                <h2>🎉 Hoàn thành thử thách!</h2>
+                <p id="clickFinalScore"></p>
+				<p id="clickPraise" class="click-praise"></p>
+                <p id="clickRewardXP"></p>
+
+                <button
+                    type="button"
+                    id="clickPlayAgain"
+                    class="mouse-start-button">
+                    🔄 Chơi lại
+                </button>
+            </div>
+
+        </section>
+
+
+<!-- KHU VỰC TRÒ CHƠI THỬ TÀI NHÁY ĐÚP -->
+<section class="mouse-play-area" id="doubleGameArea" hidden>
+
+    <div class="mouse-play-heading">
+        <h2>🎨 Thử tài nháy đúp – Bé tô màu thông minh</h2>
+        <p>Chọn màu, sau đó nháy đúp vào từng vùng tranh để tô màu nhé!</p>
+    </div>
+
+    <!-- BẢNG MÀU -->
+    <div class="color-palette" id="colorPalette">
+        <button type="button" class="color-choice selected" data-color="#ff595e" style="background:#ff595e" aria-label="Màu đỏ"></button>
+        <button type="button" class="color-choice" data-color="#ffca3a" style="background:#ffca3a" aria-label="Màu vàng"></button>
+        <button type="button" class="color-choice" data-color="#8ac926" style="background:#8ac926" aria-label="Màu xanh lá"></button>
+        <button type="button" class="color-choice" data-color="#1982c4" style="background:#1982c4" aria-label="Màu xanh dương"></button>
+        <button type="button" class="color-choice" data-color="#b084f5" style="background:#b084f5" aria-label="Màu tím"></button>
+        <button type="button" class="color-choice" data-color="#ff8fab" style="background:#ff8fab" aria-label="Màu hồng"></button>
+        <button type="button" class="color-choice" data-color="#ff924c" style="background:#ff924c" aria-label="Màu cam"></button>
+        <button type="button" class="color-choice" data-color="#9b7653" style="background:#9b7653" aria-label="Màu nâu"></button>
+    </div>
+
+    <!-- TRANH TÔ MÀU -->
+    <div class="coloring-board" id="coloringBoard">
+        <p>🖼️ Bức tranh của em sẽ xuất hiện ở đây!</p>
+    </div>
+
+    <p class="coloring-message" id="coloringMessage">
+        🌟 Hãy chọn một màu và nháy đúp vào hình để tô màu!
+    </p>
+
+    <!-- ĐIỀU KHIỂN -->
+    <div class="mouse-play-controls">
+        <button type="button" id="doubleStartButton" class="mouse-start-button">
+            🚀 Bắt đầu tô màu
+        </button>
+
+        <button type="button" id="doubleBackButton" class="mouse-secondary-button">
+            ← Chọn trò chơi khác
+        </button>
+    </div>
+
+    <!-- KẾT QUẢ -->
+    <div class="mouse-finish-panel" id="doubleFinishPanel" hidden>
+        <div class="fireworks" id="doubleFireworks"></div>
+        <h2>🎉 Em đã hoàn thành bức tranh!</h2>
+        <p id="doubleFinalScore"></p>
+        <p id="doublePraise" class="click-praise"></p>
+        <p id="doubleRewardXP"></p>
+
+        <button type="button" id="doublePlayAgain" class="mouse-start-button">
+            🔄 Tô màu lại
+        </button>
+    </div>
+
+</section>
+
+
+<!-- KHU VỰC TRÒ CHƠI NHÀ KHÁM PHÁ CHUỘT PHẢI -->
+<section class="mouse-play-area" id="rightGameArea" hidden>
+
+    <div class="mouse-play-heading">
+        <h2>🕵️ Nhà khám phá chuột phải</h2>
+        <p>Đọc yêu cầu và nhấn chuột phải vào hình ảnh phù hợp nhé!</p>
+    </div>
+
+    <!-- BẢNG ĐIỂM -->
+    <div class="mouse-score-board">
+
+        <div class="mouse-score-item">
+            <span>⏱️ Thời gian</span>
+            <strong id="rightTimer">60</strong>
+        </div>
+
+        <div class="mouse-score-item">
+            <span>⭐ Điểm số</span>
+            <strong id="rightScore">0</strong>
+        </div>
+
+        <div class="mouse-score-item">
+            <span>🎯 Đã tìm</span>
+            <strong id="rightHits">0</strong>
+        </div>
+
+    </div>
+
+    <!-- YÊU CẦU TÌM KIẾM -->
+    <div class="right-question" id="rightQuestion">
+        🔎 Em hãy tìm hình ảnh theo yêu cầu!
+    </div>
+
+    <!-- KHU VỰC HÌNH ẢNH -->
+    <div class="right-play-field" id="rightPlayField">
+        <p id="rightMessage">Nhấn Bắt đầu để khám phá nhé!</p>
+        <div class="right-picture-list" id="rightPictureList"></div>
+    </div>
+
+    <!-- NÚT ĐIỀU KHIỂN -->
+    <div class="mouse-play-controls">
+
+        <button type="button" id="rightStartButton" class="mouse-start-button">
+            🚀 Bắt đầu khám phá
+        </button>
+
+        <button type="button" id="rightBackButton" class="mouse-secondary-button">
+            ← Chọn trò chơi khác
+        </button>
+
+    </div>
+
+    <!-- KẾT QUẢ -->
+    <div class="mouse-finish-panel" id="rightFinishPanel" hidden>
+        <div class="fireworks" id="rightFireworks"></div>
+        <h2>🎉 Nhà khám phá tài ba!</h2>
+        <p id="rightFinalScore"></p>
+        <p id="rightPraise" class="click-praise"></p>
+        <p id="rightRewardXP"></p>
+
+        <button type="button" id="rightPlayAgain" class="mouse-start-button">
+            🔄 Khám phá lại
+        </button>
+    </div>
+
+</section>
+
+<div class="mouse-home-link">
+
+
+            <a href="home.html">← Quay về trang chủ</a>
+        </div>
+
+    </main>
+
+</body>
+</html>
+<script src="js/mouse.js"></script>

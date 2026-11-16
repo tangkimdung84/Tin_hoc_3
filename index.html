@@ -1,15 +1,112 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"
-/>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>tinhoc3-online</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin học 3 - Học vui mỗi ngày</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/login.js" defer></script>
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <!-- Khu vực giới thiệu -->
+        <section class="welcome-section">
+
+            <div class="brand">
+                <div class="brand-icon">💻</div>
+                <div>
+                    <h1>TIN HỌC 3</h1>
+                    <p>HỌC VUI MỖI NGÀY</p>
+                </div>
+            </div>
+
+            <div class="welcome-content">
+                <div class="welcome-label">🌟 Chào mừng em đến với</div>
+
+                <h2>
+                    THẾ GIỚI<br>
+                    <span>TIN HỌC</span>
+                </h2>
+
+                <p class="welcome-description">
+                    Cùng học tập, khám phá kiến thức
+                    và chinh phục những trò chơi thú vị nhé!
+                </p>
+
+                <div class="computer-illustration">
+                    <div class="computer-screen">
+                        <span>😊</span>
+                        <strong>HELLO!</strong>
+                    </div>
+                    <div class="computer-keyboard"></div>
+                </div>
+
+                <div class="decoration star-one">✦</div>
+                <div class="decoration star-two">★</div>
+                <div class="decoration star-three">✧</div>
+            </div>
+
+        </section>
+
+
+        <!-- Khu vực đăng nhập -->
+        <section class="form-section">
+
+            <div class="login-card">
+
+                <div class="avatar-icon">👧🏻</div>
+
+                <h2>Xin chào bạn nhỏ!</h2>
+
+                <p class="login-description">
+                    Hãy nhập tên để bắt đầu hành trình khám phá nhé!
+                </p>
+
+                <form id="loginForm">
+
+                    <label for="studentName">
+                        Tên của em
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Ví dụ: Nguyễn Minh Anh"
+                        maxlength="30"
+                        autocomplete="name"
+                        required
+                    >
+
+                    <p id="errorMessage" class="error-message"></p>
+
+                    <button type="submit" class="start-button">
+                        BẮT ĐẦU HỌC 🚀
+                    </button>
+
+                </form>
+
+                <div id="successMessage" class="success-message">
+                </div>
+
+                <div class="login-note">
+                    🔒 Thông tin học tập được lưu trên thiết bị này.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        TIN HỌC 3 – HỌC VUI MỖI NGÀY
+        <span>♥</span>
+    </footer>
+
+</body>
 </html>

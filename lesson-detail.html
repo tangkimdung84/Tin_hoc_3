@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nội dung bài học - Tin học 3</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/lesson-detail.css">
+
+  
+<script src="data/lesson-content.js" defer></script>
+<script src="data/practice-data.js" defer></script>
+<script src="js/lesson-detail.js" defer></script>
+<script src="js/badges.js" defer></script>
+<script src="js/practice.js" defer></script>
+</head>
+
+<body>
+  <header class="detail-header">
+    <a href="lessons.html" class="back-link">← Danh sách bài học</a>
+
+    <div class="student-info">
+      Xin chào, <strong id="studentName">Bạn nhỏ</strong>!
+    </div>
+  </header>
+
+  <main class="detail-container">
+    <section class="lesson-heading">
+      <div class="heading-icon">📘</div>
+      <div>
+        <p class="heading-label">TIN HỌC LỚP 3</p>
+        <h1 id="lessonTitle">Đang tải bài học...</h1>
+        <p class="heading-subtitle">
+          Cùng khám phá kiến thức Tin học nhé!
+        </p>
+      </div>
+    </section>
+	<!-- THANH ĐIỀU HƯỚNG HỌC TẬP -->
+<nav class="learning-nav">
+
+  <a href="#objectivesSection" class="learning-nav-item">
+    <span>🎯</span>
+    <strong>Mục tiêu</strong>
+    <small>Em cần đạt được</small>
+  </a>
+
+  <a href="#theorySection" class="learning-nav-item">
+    <span>📚</span>
+    <strong>Khám phá</strong>
+    <small>Kiến thức mới</small>
+  </a>
+
+  <a href="#lessonActions" class="learning-nav-item">
+    <span>✏️</span>
+    <strong>Luyện tập</strong>
+    <small>Thử sức nhé!</small>
+  </a>
+
+</nav>
+	
+	
+
+    <section class="lesson-section" id="objectivesSection">
+      <h2>🎯 Em cần đạt được</h2>
+      <ul id="lessonObjectives"></ul>
+    </section>
+
+    <section class="lesson-section theory-section" id="theorySection">
+      <h2>📚 Kiến thức mới</h2>
+      <div id="lessonTheory" class="lesson-theory"></div>
+    </section>
+	
+	<section class="lesson-section memory-section" id="memorySection" hidden>
+    <div class="memory-heading">
+        <span class="memory-icon">⭐</span>
+        <h2>Em cần ghi nhớ</h2>
+    </div>
+
+    <div id="lessonMemory" class="memory-content"></div>
+</section>
+
+    <section class="lesson-section unavailable-section"
+             id="unavailableSection" hidden>
+      <div class="unavailable-icon">🚧</div>
+      <h2>Nội dung đang được cập nhật</h2>
+      <p>
+        Bài học này chưa có dữ liệu nội dung chi tiết.
+        Em hãy quay lại danh sách để chọn bài học khác nhé!
+      </p>
+    </section>
+
+    <section class="lesson-actions" id="lessonActions">
+      <a href="lessons.html" class="action-button secondary-button">
+        ← Quay lại danh sách bài
+      </a>
+
+      <button type="button" class="action-button primary-button"
+              id="practiceButton">
+        🚀 Luyện tập
+      </button>
+    </section>
+  </main>
+
+  <footer class="detail-footer">
+    🌟 Tin học 3 – Học vui mỗi ngày
+  </footer>
+</body>
+</html>

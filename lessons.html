@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Thế giới bài học - Tin học 3</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lessons.css">
+
+    <script src="data/lessons-data.js" defer></script>
+    <script src="js/lessons.js" defer></script>
+</head>
+
+<body class="lessons-page">
+
+    <!-- THANH ĐẦU TRANG -->
+    <header class="lessons-header">
+
+        <a href="home.html" class="lessons-brand">
+
+            <div class="lessons-logo">💻</div>
+
+            <div>
+                <h1>TIN HỌC 3</h1>
+                <p>HỌC VUI MỖI NGÀY</p>
+            </div>
+
+        </a>
+
+        <div class="lessons-header-right">
+
+            <a href="home.html" class="back-home">
+                🏠 Trang chủ
+            </a>
+
+            <div class="lessons-student">
+                <span>👧🏻</span>
+                <strong id="lessonStudentName">Bạn nhỏ</strong>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="lessons-main">
+
+        <!-- TIÊU ĐỀ -->
+        <section class="lessons-banner">
+
+            <div class="banner-content">
+
+                <span class="banner-label">
+                    🌈 CÙNG NHAU KHÁM PHÁ
+                </span>
+
+                <h2>THẾ GIỚI BÀI HỌC</h2>
+
+                <p>
+                    Mỗi bài học là một hành trình khám phá
+                    kiến thức Tin học thật thú vị!
+                </p>
+
+                <div class="lesson-total">
+                    📚 <strong id="totalLessons">16</strong>
+                    bài học đang chờ em
+                </div>
+
+            </div>
+
+            <div class="banner-picture">
+                🖥️
+                <span>⭐</span>
+                <span>✨</span>
+            </div>
+
+        </section>
+
+
+        <!-- TÌM KIẾM -->
+        <section class="lesson-tools">
+
+            <div class="lesson-tools-title">
+
+                <div>
+                    <h2>📖 Danh sách bài học</h2>
+
+                    <p>
+                        Chọn bài học mà em muốn khám phá nhé!
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="lesson-search">
+
+                <span>🔍</span>
+
+                <input
+                    type="text"
+                    id="lessonSearch"
+                    placeholder="Tìm bài học theo tên hoặc số bài..."
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- DANH SÁCH BÀI -->
+        <section class="lesson-list-section">
+
+            <div class="lesson-grid" id="lessonGrid">
+
+                <!-- JavaScript tự động tạo 16 thẻ bài học -->
+
+            </div>
+
+            <div id="noLesson" class="no-lesson">
+                <div>🔎</div>
+                <h3>Chưa tìm thấy bài học!</h3>
+                <p>Em hãy thử nhập từ khóa khác nhé.</p>
+            </div>
+
+        </section>
+
+
+        <!-- THÔNG BÁO -->
+        <div id="lessonToast" class="lesson-toast"></div>
+
+    </main>
+
+
+    <footer class="lessons-footer">
+        💙 TIN HỌC 3 – HỌC VUI MỖI NGÀY 💙
+    </footer>
+
+</body>
+</html>

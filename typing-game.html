@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thử tài gõ phím - Tin học 3</title>
+    <link rel="stylesheet" href="css/typing-game.css">
+</head>
+<body>
+
+   <header class="typing-header">
+    <div class="typing-header-content">
+
+        <div class="typing-left">
+            <div class="typing-logo">
+                ⌨️ Thử tài gõ phím
+            </div>
+
+            <a href="home.html" class="typing-home-btn">
+                ← Trang chủ
+            </a>
+        </div>
+
+        <div class="typing-user">
+            <span id="typingStudentName">Xin chào, bạn nhỏ!</span>
+
+            <span class="typing-xp">
+                ⭐ <strong id="typingTotalXP">0 XP</strong>
+            </span>
+        </div>
+
+    </div>
+</header>
+
+    <main class="typing-container">
+	
+	
+
+<!-- KHU VỰC CHỌN TRÒ CHƠI -->
+<section class="typing-game-menu" id="typingGameMenu">
+
+    <h2>🎮 CHỌN TRÒ CHƠI</h2>
+
+    <div class="typing-menu-list">
+
+        <button class="typing-menu-card" id="oldTypingGame">
+            <span>⌨️</span>
+            <strong>Thử tài gõ từ</strong>
+            <small>Gõ đúng từ xuất hiện trên màn hình</small>
+        </button>
+
+        <button class="typing-menu-card" id="cloudTypingGame">
+            <span>☁️</span>
+            <strong>Săn chữ trong mây</strong>
+            <small>Gõ nhanh chữ cái đang rơi xuống</small>
+        </button>
+
+    </div>
+
+</section>
+
+
+        <div class="typing-stats">
+            <div class="stat-card">
+                <span>⭐ Điểm số</span>
+                <strong id="typingScore">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>⏱️ Thời gian</span>
+                <strong id="typingTimer">60</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>🎯 Số từ đúng</span>
+                <strong id="typingHits">0</strong>
+            </div>
+        </div>
+
+        
+<!-- TRÒ CHƠI CŨ -->
+<div id="oldTypingArea" hidden>
+
+    <section class="typing-game-box">
+
+        <h2>🌟 Em hãy gõ từ sau đây</h2>
+
+        <div class="typing-word" id="typingWord">
+            SẴN SÀNG
+        </div>
+
+        <input
+            type="text"
+            id="typingInput"
+            placeholder="Em gõ từ vào đây..."
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+            disabled
+        >
+
+        <p id="typingMessage">
+            Nhấn Bắt đầu để tham gia nhé!
+        </p>
+
+        <div class="typing-controls">
+
+            <button id="typingStartButton">
+                🚀 Bắt đầu
+            </button>
+
+            <button id="typingBackButton">
+                ← Chọn trò chơi
+            </button>
+
+        </div>
+
+    </section>
+
+</div>
+
+<!-- KẾT QUẢ TRÒ CHƠI CŨ -->
+<section class="typing-finish" id="typingFinish" hidden>
+
+    <div class="typing-fireworks" id="typingFireworks"></div>
+    <div class="typing-trophy">🏆</div>
+
+    <h2>🎉 Chúc mừng em!</h2>
+    <p id="typingFinalScore"></p>
+    <p id="typingFinalPraise"></p>
+    <p id="typingRewardXP"></p>
+
+    <button id="typingPlayAgain">
+        🔄 Chơi lại
+    </button>
+
+</section>
+
+<!-- TRÒ CHƠI MỚI: SĂN CHỮ TRONG MÂY -->
+<section id="cloudTypingArea" class="cloud-typing-area" hidden>
+
+    <h2>☁️ SĂN CHỮ TRONG MÂY</h2>
+
+    <p>Em hãy quan sát chữ trong những đám mây và gõ thật nhanh nhé!</p>
+
+    <div class="cloud-stats">
+        <span>⭐ Điểm: <strong id="cloudScore">0</strong></span>
+        <span>❤️ Lượt chơi: <strong id="cloudLives">3</strong></span>
+    </div>
+
+    <div id="cloudGameBoard" class="cloud-game-board">
+        <p class="cloud-instruction">Nhấn Bắt đầu để săn chữ nhé!</p>
+    </div>
+
+    <input
+        type="text"
+        id="cloudTypingInput"
+        placeholder="Gõ chữ cái trong đám mây..."
+        autocomplete="off"
+        autocapitalize="off"
+        spellcheck="false"
+        disabled
+    >
+
+    <p id="cloudMessage">☁️ Những đám mây đang chờ em!</p>
+
+    <div class="typing-controls">
+        <button id="cloudStartButton">🚀 Bắt đầu</button>
+        <button id="cloudBackButton">← Chọn trò chơi</button>
+    </div>
+
+    <div id="cloudFinish" class="cloud-finish" hidden>
+	<div class="cloud-fireworks" id="cloudFireworks"></div>
+        <h2>🏆 Nhà săn chữ tài ba!</h2>
+        <p id="cloudFinalScore"></p>
+        <p id="cloudRewardXP"></p>
+        <button id="cloudPlayAgain">🔄 Chơi lại</button>
+    </div>
+
+</section>
+
+
+
+    </main>
+
+    <script src="js/typing-game.js"></script>
+</body>
+</html>

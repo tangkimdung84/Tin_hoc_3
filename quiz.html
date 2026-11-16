@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thử tài kiến thức - Tin học 3</title>
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="quiz-header">
+        <div class="quiz-header-content">
+
+            <div class="quiz-logo">
+    💻 Thế giới Tin học 3
+
+    <a href="home.html" class="quiz-home-button">
+        ← Trang chủ
+    </a>
+</div>
+
+            <div class="quiz-user">
+                <span id="quizStudentName">Xin chào, bạn nhỏ!</span>
+                <span class="quiz-xp">⭐ <strong id="quizTotalXP">0 XP</strong></span>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="quiz-container">
+
+        <!-- TIÊU ĐỀ -->
+        <section class="quiz-intro">
+            <div class="quiz-intro-icon">🎯</div>
+
+            <h1>THỬ TÀI KIẾN THỨC</h1>
+
+            <p>
+                Cùng khám phá kiến thức Tin học và chinh phục
+                những thử thách thú vị nhé!
+            </p>
+        </section>
+
+
+        <!-- DANH SÁCH BÀI HỌC -->
+        <section class="quiz-lesson-section">
+
+            <div class="quiz-section-heading">
+                <h2>📚 Chọn bài học để thử tài</h2>
+                <p>Em hãy chọn một bài học mình muốn chinh phục.</p>
+            </div>
+
+            <div id="quizLessonList" class="quiz-lesson-list">
+
+                <!-- Danh sách bài học sẽ được tạo bằng JavaScript -->
+
+            </div>
+
+        </section>
+
+
+        <!-- KHU VỰC LÀM BÀI -->
+        <section id="quizGameSection" class="quiz-game-section" hidden>
+
+            <div class="quiz-game-heading">
+                <button type="button" id="quizBackButton">
+                    ← Chọn bài khác
+                </button>
+
+                <h2 id="quizGameTitle">Thử tài kiến thức</h2>
+            </div>
+
+            <div id="quizGameContent">
+
+                <!-- Câu hỏi sẽ được hiển thị tại đây -->
+
+            </div>
+
+        </section>
+
+
+        <!-- KẾT QUẢ -->
+        <section id="quizResultSection" class="quiz-result-section" hidden>
+
+            <div id="quizResultContent">
+
+                <!-- Kết quả sẽ được hiển thị tại đây -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="quiz-footer">
+        <p>🌟 Học vui - Khám phá - Chinh phục kiến thức!</p>
+    </footer>
+
+
+    <script src="data/lessons-data.js"></script>
+    <script src="data/quiz-data.js"></script>
+    <script src="js/quiz.js"></script>
+
+</body>
+
+</html>

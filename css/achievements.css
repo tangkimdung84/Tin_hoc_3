@@ -1,0 +1,674 @@
+
+/* ==================================
+   TRANG THÀNH TÍCH HỌC TẬP
+================================== */
+
+.achievements-page {
+    background: #f2f7fd;
+}
+
+/* KHU VỰC CHÍNH */
+.achievements-main {
+    width: min(1200px, 92%);
+    margin: 30px auto;
+}
+
+/* TIÊU ĐỀ */
+.achievements-hero {
+    padding: 35px 25px;
+    text-align: center;
+    background: linear-gradient(135deg, #dceeff, #edf7ff);
+    border-radius: 22px;
+    margin-bottom: 25px;
+}
+
+.achievements-hero h2 {
+    color: #1769aa;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.achievements-hero p {
+    color: #647b91;
+    margin-bottom: 20px;
+}
+
+.back-home-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #247fca;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+.back-home-btn:hover {
+    background: #1769aa;
+}
+
+/* CÁC Ô THỐNG KÊ */
+.achievement-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.achievement-stat-card {
+    background: white;
+    padding: 22px 12px;
+    text-align: center;
+    border-radius: 18px;
+    box-shadow: 0 5px 16px rgba(40, 100, 160, 0.07);
+}
+
+.achievement-stat-card span {
+    display: block;
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.achievement-stat-card p {
+    color: #718096;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.achievement-stat-card strong {
+    color: #1769aa;
+    font-size: 23px;
+}
+
+/* CÁC KHUNG NỘI DUNG */
+.achievement-panel {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 18px rgba(40, 100, 160, 0.07);
+}
+
+.achievement-panel h2 {
+    color: #1769aa;
+    font-size: 22px;
+    margin-bottom: 22px;
+}
+
+/* DANH SÁCH HUY CHƯƠNG */
+.achievement-badges {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+/* LỊCH SỬ LUYỆN TẬP */
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 16px;
+    border: 1px solid #e5edf6;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    background: #f9fcff;
+}
+
+.history-info h3 {
+    color: #24557d;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.history-info p {
+    color: #718096;
+    font-size: 13px;
+}
+
+.history-score {
+    text-align: right;
+    color: #1769aa;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.empty-history {
+    text-align: center;
+    padding: 30px 15px;
+    color: #8192a5;
+}
+
+.empty-history span {
+    display: block;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+/* MÁY TÍNH BẢNG */
+@media (max-width: 900px) {
+    .achievement-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .achievement-badges {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* ĐIỆN THOẠI */
+@media (max-width: 600px) {
+    .achievements-main {
+        width: 94%;
+        margin: 18px auto;
+    }
+
+    .achievements-hero {
+        padding: 25px 15px;
+    }
+
+    .achievements-hero h2 {
+        font-size: 22px;
+    }
+
+    .achievement-panel {
+        padding: 17px;
+    }
+
+    .achievement-panel h2 {
+        font-size: 19px;
+    }
+
+    .achievement-badges {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .history-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .history-score {
+        text-align: left;
+    }
+}
+
+
+
+/* ==================================
+   TIẾN ĐỘ 16 BÀI HỌC
+================================== */
+
+.lesson-progress-summary {
+    padding: 18px;
+    background: #f1f8ff;
+    border-radius: 15px;
+    margin-bottom: 22px;
+}
+
+.lesson-progress-summary strong {
+    color: #1769aa;
+    font-size: 22px;
+}
+
+.lesson-progress-summary p {
+    color: #718096;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.lesson-progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #dce8f4;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+#lessonProgressFill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #43b581, #80d6a9);
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+.lesson-progress-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.lesson-progress-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    border: 1px solid #e3edf7;
+    background: #f9fcff;
+    border-radius: 13px;
+}
+
+.lesson-progress-item.completed {
+    background: #effaf4;
+    border-color: #bce8ce;
+}
+
+.lesson-progress-number {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e5edf6;
+    color: #54718d;
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.lesson-progress-item.completed .lesson-progress-number {
+    background: #d3f3df;
+    color: #21834d;
+}
+
+.lesson-progress-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.lesson-progress-info h3 {
+    color: #24557d;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.lesson-progress-info p {
+    color: #8192a5;
+    font-size: 12px;
+}
+
+.lesson-progress-status {
+    font-size: 20px;
+}
+
+/* HIỂN THỊ TRÊN ĐIỆN THOẠI */
+@media (max-width: 600px) {
+    .lesson-progress-list {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson-progress-item {
+        padding: 12px;
+    }
+}
+
+
+/* ==================================
+   THỐNG KÊ KẾT QUẢ LUYỆN TẬP
+================================== */
+
+.practice-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.practice-stat-card {
+    background: #f0f7ff;
+    border: 1px solid #d8eaff;
+    border-radius: 16px;
+    padding: 22px 12px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.practice-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(30, 100, 180, 0.12);
+}
+
+.practice-stat-card span {
+    display: block;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.practice-stat-card p {
+    color: #52677d;
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+
+.practice-stat-card strong {
+    color: #1673c9;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Máy tính bảng */
+@media (max-width: 900px) {
+    .practice-stat-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Điện thoại */
+@media (max-width: 480px) {
+    .practice-stat-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .practice-stat-card {
+        padding: 16px 8px;
+    }
+
+    .practice-stat-card span {
+        font-size: 26px;
+    }
+
+    .practice-stat-card p {
+        font-size: 12px;
+    }
+
+    .practice-stat-card strong {
+        font-size: 24px;
+    }
+}
+
+/* ==================================
+   BIỂU ĐỒ KẾT QUẢ HỌC TẬP
+================================== */
+
+.chart-description {
+    color: #64748b;
+    margin: 8px 0 24px;
+    font-size: 14px;
+}
+
+.practice-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.chart-item {
+    width: 100%;
+}
+
+.chart-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    color: #334155;
+    font-weight: 600;
+}
+
+.chart-label strong {
+    color: #1673c9;
+    font-size: 18px;
+}
+
+.chart-track {
+    width: 100%;
+    height: 22px;
+    background: #e8eef5;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.chart-bar {
+    height: 100%;
+    width: 0;
+    border-radius: 20px;
+    transition: width 0.8s ease;
+}
+
+.correct-bar {
+    background: linear-gradient(90deg, #38bdf8, #1673c9);
+}
+
+.wrong-bar {
+    background: linear-gradient(90deg, #fbbf24, #f97316);
+}
+
+.chart-message {
+    margin-top: 25px;
+    padding: 15px;
+    background: #f0f7ff;
+    border-radius: 12px;
+    color: #2563a6;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+    .chart-label {
+        font-size: 13px;
+    }
+
+    .chart-label strong {
+        font-size: 16px;
+    }
+
+    .chart-track {
+        height: 18px;
+    }
+}
+
+/* ==================================
+   NÚT LUYỆN TẬP LẠI
+================================== */
+
+.history-action {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.retry-practice-btn {
+    border: none;
+    background: linear-gradient(135deg, #2196f3, #0875cf);
+    color: white;
+    padding: 9px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.retry-practice-btn:hover {
+    background: linear-gradient(135deg, #0875cf, #075ba5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(8, 117, 207, 0.2);
+}
+
+@media (max-width: 600px) {
+    .history-action {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        gap: 8px;
+    }
+
+    .retry-practice-btn {
+        font-size: 12px;
+        padding: 8px 13px;
+    }
+}
+
+/* ==================================
+   NÚT XEM CHI TIẾT KẾT QUẢ
+================================== */
+
+.view-detail-btn {
+    border: 1px solid #1684d8;
+    background: #eaf5ff;
+    color: #0875cf;
+    padding: 9px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.view-detail-btn:hover {
+    background: #1684d8;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(8, 117, 207, 0.15);
+}
+
+
+/* ==================================
+   CỬA SỔ XEM CHI TIẾT KẾT QUẢ
+================================== */
+
+.detail-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.55);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.detail-modal[hidden] {
+    display: none;
+}
+
+.detail-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    max-height: 85vh;
+    overflow-y: auto;
+
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+
+    animation: modalAppear 0.25s ease;
+}
+
+.detail-modal-content h2 {
+    color: #1976d2;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.close-detail-btn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+
+    border: none;
+    background: #ffe5e5;
+    color: #e53935;
+
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.close-detail-btn:hover {
+    background: #e53935;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ==================================
+   14.9 - GIAO DIỆN XEM LẠI CÂU HỎI
+================================== */
+
+.review-question {
+    background: #f5f9ff;
+    border: 2px solid #d7e7ff;
+    border-radius: 14px;
+    padding: 18px;
+    margin: 16px 0;
+    line-height: 1.6;
+    transition: 0.2s ease;
+}
+
+.review-question h4 {
+    color: #1769aa;
+    font-size: 17px;
+    margin: 0 0 14px;
+    line-height: 1.5;
+}
+
+.review-question p {
+    margin: 9px 0;
+    color: #34495e;
+    font-size: 15px;
+}
+
+.review-question p strong {
+    color: #263238;
+}
+
+.review-question p:last-child {
+    background: #fff8df;
+    border-radius: 9px;
+    padding: 10px 12px;
+    color: #805b00;
+}
+
+/* Câu trả lời đúng */
+.review-question.review-correct {
+    background: #effaf2;
+    border: 2px solid #43b66b;
+}
+
+.review-question.review-correct h4 {
+    color: #218447;
+}
+
+/* Câu trả lời sai */
+.review-question.review-incorrect {
+    background: #fff2f2;
+    border: 2px solid #e76b6b;
+}
+
+.review-question.review-incorrect h4 {
+    color: #d43d3d;
+}

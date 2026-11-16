@@ -1,0 +1,376 @@
+
+/* =========================
+   1. CÀI ĐẶT CHUNG
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #eaf5ff, #f5f9ff);
+    min-height: 100vh;
+    color: #24466b;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   2. KHUNG CHÍNH
+========================= */
+
+.login-container {
+    width: min(1100px, 92%);
+    min-height: 620px;
+    margin: 35px auto 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(43, 105, 160, 0.13);
+}
+
+
+/* =========================
+   3. KHU VỰC GIỚI THIỆU
+========================= */
+
+.welcome-section {
+    background: linear-gradient(145deg, #1878d4, #4ca5ee);
+    padding: 35px 40px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 52px;
+    height: 52px;
+    background: white;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    font-size: 29px;
+}
+
+.brand h1 {
+    font-size: 23px;
+    font-weight: 900;
+}
+
+.brand p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-top: 3px;
+}
+
+.welcome-content {
+    margin-top: 85px;
+    position: relative;
+    z-index: 1;
+}
+
+.welcome-label {
+    display: inline-block;
+    background: rgba(255,255,255,0.18);
+    padding: 9px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.welcome-content h2 {
+    font-size: 53px;
+    line-height: 1.15;
+    margin-top: 20px;
+    font-weight: 900;
+}
+
+.welcome-content h2 span {
+    color: #ffe47a;
+}
+
+.welcome-description {
+    max-width: 360px;
+    line-height: 1.7;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+
+/* Hình minh họa máy tính */
+
+.computer-illustration {
+    width: 220px;
+    margin: 35px auto 0;
+    position: relative;
+}
+
+.computer-screen {
+    height: 125px;
+    background: white;
+    border: 9px solid #174e8e;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #2679ce;
+    box-shadow: 0 10px 0 rgba(0,0,0,0.12);
+}
+
+.computer-screen span {
+    font-size: 45px;
+}
+
+.computer-screen strong {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.computer-keyboard {
+    width: 260px;
+    height: 17px;
+    background: #ffd45b;
+    border-radius: 5px 5px 12px 12px;
+    margin: 10px auto 0;
+}
+
+
+/* Trang trí */
+
+.decoration {
+    position: absolute;
+    color: #ffe47a;
+}
+
+.star-one {
+    top: 20px;
+    right: 45px;
+    font-size: 45px;
+}
+
+.star-two {
+    bottom: 80px;
+    left: 25px;
+    font-size: 32px;
+}
+
+.star-three {
+    top: 160px;
+    right: 15px;
+    font-size: 40px;
+}
+
+
+/* =========================
+   4. KHU VỰC ĐĂNG NHẬP
+========================= */
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: white;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 390px;
+    text-align: center;
+}
+
+.avatar-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 18px;
+    background: #fff2d8;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 49px;
+    border: 5px solid #fff9ec;
+}
+
+.login-card h2 {
+    font-size: 27px;
+    color: #236bb3;
+}
+
+.login-description {
+    color: #8294a8;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 12px 0 30px;
+}
+
+.login-card label {
+    display: block;
+    text-align: left;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #345879;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid #dceafa;
+    border-radius: 13px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.25s;
+}
+
+.login-card input:focus {
+    border-color: #3995e5;
+    box-shadow: 0 0 0 4px rgba(57,149,229,0.12);
+}
+
+.login-card input::placeholder {
+    color: #b4c1cf;
+}
+
+
+/* =========================
+   5. NÚT BẮT ĐẦU
+========================= */
+
+.start-button {
+    width: 100%;
+    border: none;
+    background: linear-gradient(90deg, #2384dd, #45a7ed);
+    color: white;
+    padding: 16px;
+    border-radius: 13px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 18px;
+    box-shadow: 0 6px 15px rgba(35,132,221,0.25);
+    transition: 0.25s;
+}
+
+.start-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 20px rgba(35,132,221,0.3);
+}
+
+.start-button:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================
+   6. THÔNG BÁO
+========================= */
+
+.error-message {
+    color: #e34b55;
+    font-size: 13px;
+    text-align: left;
+    margin-top: 7px;
+    min-height: 17px;
+}
+
+.success-message {
+    margin-top: 15px;
+    color: #168d58;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.login-note {
+    background: #f3f8ff;
+    color: #8296ac;
+    border-radius: 12px;
+    padding: 13px;
+    font-size: 12px;
+    margin-top: 28px;
+}
+
+
+/* =========================
+   7. CHÂN TRANG
+========================= */
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #89a3bd;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+footer span {
+    color: #f18b8b;
+}
+
+
+/* =========================
+   8. ĐIỆN THOẠI
+========================= */
+
+@media (max-width: 760px) {
+
+    .login-container {
+        width: 94%;
+        margin: 15px auto;
+        grid-template-columns: 1fr;
+        border-radius: 22px;
+    }
+
+    .welcome-section {
+        padding: 25px;
+        min-height: 370px;
+    }
+
+    .welcome-content {
+        margin-top: 40px;
+    }
+
+    .welcome-content h2 {
+        font-size: 38px;
+    }
+
+    .welcome-description {
+        max-width: 260px;
+        font-size: 13px;
+    }
+
+    .computer-illustration {
+        position: absolute;
+        width: 145px;
+        right: 20px;
+        bottom: 30px;
+        margin: 0;
+        transform: scale(0.75);
+        transform-origin: bottom right;
+    }
+
+    .form-section {
+        padding: 35px 23px;
+    }
+
+    .login-card h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 380px) {
+    .computer-illustration {
+        opacity: 0.35;
+    }
+}

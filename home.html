@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tin học 3 - Trang chủ</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+
+    <script src="js/home.js" defer></script>
+</head>
+
+<body class="home-page">
+
+    <!-- THANH ĐẦU TRANG -->
+    <header class="home-header">
+
+        <a href="home.html" class="home-brand">
+            <div class="home-logo">💻</div>
+
+            <div>
+                <h1>TIN HỌC 3</h1>
+                <p>HỌC VUI MỖI NGÀY</p>
+            </div>
+        </a>
+
+        <div class="header-student">
+            <div class="student-avatar">👧🏻</div>
+
+            <div class="student-header-info">
+                <span>Xin chào!</span>
+                <strong id="headerStudentName">Bạn nhỏ</strong>
+            </div>
+
+            <button id="changeStudent" class="change-student-btn">
+                Đổi người học
+            </button>
+        </div>
+
+    </header>
+
+
+    <!-- NỘI DUNG CHÍNH -->
+    <main class="home-main">
+
+        <!-- LỜI CHÀO -->
+        <section class="hero-section">
+
+            <div class="hero-text">
+
+                <span class="hero-label">
+                    🌟 CHÀO MỪNG EM ĐẾN VỚI THẾ GIỚI TIN HỌC
+                </span>
+
+                <h2>
+                    Xin chào,
+                    <span id="welcomeStudentName">Bạn nhỏ</span>!
+                </h2>
+
+                <p>
+                    Hôm nay em muốn khám phá điều gì?
+                    Cùng học tập và chinh phục những thử thách thú vị nhé!
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#learningArea" class="hero-button">
+                        KHÁM PHÁ NGAY 🚀
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-picture">
+                <div class="hero-circle"></div>
+                <div class="hero-computer">🖥️</div>
+                <div class="hero-star star-a">⭐</div>
+                <div class="hero-star star-b">✨</div>
+                <div class="hero-star star-c">🌟</div>
+            </div>
+
+        </section>
+
+
+        <!-- THÔNG TIN HỌC TẬP -->
+        <section class="student-stats">
+
+            <div class="stat-card">
+                <div class="stat-icon xp-icon">⭐</div>
+
+                <div class="stat-info">
+                    <span>Điểm kinh nghiệm</span>
+                    <strong id="studentXP">0 XP</strong>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon level-icon">🏆</div>
+
+                <div class="stat-info">
+                    <span>Cấp độ hiện tại</span>
+                    <strong id="studentLevel">Cấp 1</strong>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon lesson-icon">📚</div>
+
+                <div class="stat-info">
+                    <span>Bài học hoàn thành</span>
+                    <strong id="completedLessons">0 bài</strong>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon badge-icon">🥇</div>
+
+                <div class="stat-info">
+                    <span>Huy chương</span>
+                    <strong id="studentBadges">0</strong>
+                </div>
+            </div>
+
+        </section>
+		
+<!--thêm chức năng-->
+
+<!-- KHU VỰC HUY CHƯƠNG -->
+<section class="badges-section">
+
+    <div class="section-heading">
+        <div>
+            <h2>🏆 Bộ sưu tập huy chương</h2>
+            <p>Những thành tích đáng tự hào của em!</p>
+        </div>
+    </div>
+
+    <div class="badges-grid" id="badgesGrid">
+
+        <!-- Huy chương được tạo tự động bằng JavaScript -->
+
+    </div>
+
+</section>
+
+
+
+
+
+        <!-- THANH TIẾN TRÌNH -->
+        <section class="progress-section">
+
+            <div class="progress-heading">
+                <div>
+                    <h3>🌈 Hành trình chinh phục Tin học</h3>
+                    <p id="progressMessage">Cố gắng tích lũy XP nhé!</p>
+                </div>
+
+                <strong id="progressText">0/100 XP</strong>
+            </div>
+
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+        </section>
+
+
+        <!-- KHU VỰC CHỨC NĂNG -->
+        <section class="learning-section" id="learningArea">
+
+            <div class="section-heading">
+                <div>
+                    <h2>🎯 Khám phá và học tập</h2>
+                    <p>Chọn một hoạt động em yêu thích nhé!</p>
+                </div>
+            </div>
+
+
+            <div class="feature-grid">
+
+                <a href="lessons.html" class="feature-card lesson-card">
+
+                    <div class="feature-illustration">📚</div>
+
+                    <div class="feature-content">
+                        <span class="feature-tag">HỌC TẬP</span>
+                        <h3>Thế giới bài học</h3>
+                        <p>Khám phá kiến thức Tin học lớp 3.</p>
+                    </div>
+
+                    <span class="feature-arrow">→</span>
+                </a>
+
+
+                <a href="quiz.html" class="feature-card quiz-card"   data-feature="Ôn tập">
+
+                    <div class="feature-illustration">📝</div>
+
+                    <div class="feature-content">
+                        <span class="feature-tag">THỬ THÁCH</span>
+                        <h3>Thử tài kiến thức</h3>
+                        <p>Trả lời câu hỏi và kiểm tra kiến thức.</p>
+                    </div>
+
+                    <span class="feature-arrow">→</span>
+                </a>
+
+
+                <a href="mouse.html" class="feature-card mouse-card"   data-feature="Luyện chuột">
+
+                    <div class="feature-illustration">🖱️</div>
+
+                    <div class="feature-content">
+                        <span class="feature-tag">TRÒ CHƠI</span>
+                        <h3>Vui cùng chuột máy tính</h3>
+                        <p>Rèn luyện thao tác sử dụng chuột.</p>
+                    </div>
+
+                    <span class="feature-arrow">→</span>
+                </a>
+
+
+                <a href="typing-game.html" class="feature-card typing-card"
+                   data-feature="Luyện gõ phím">
+
+                    <div class="feature-illustration">⌨️</div>
+
+                    <div class="feature-content">
+                        <span class="feature-tag">TRÒ CHƠI</span>
+                        <h3>Thử tài gõ phím</h3>
+                        <p>Luyện gõ phím nhanh và chính xác.</p>
+                    </div>
+
+                    <span class="feature-arrow">→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+       
+<!-- THÀNH TÍCH -->
+<section class="achievement-section">
+
+    <div class="achievement-heading">
+        <div>
+            <h2>🏅 Góc thành tích của em</h2>
+            <p>Những phần thưởng đang chờ em chinh phục!</p>
+        </div>
+    </div>
+
+    <div class="achievement-content">
+
+        <div class="achievement-trophy">🏆</div>
+
+        <div>
+            <h3>Hãy tiếp tục hành trình của em!</h3>
+
+            <p>
+                Xem lại điểm kinh nghiệm, huy chương
+                và những kết quả luyện tập đáng tự hào nhé!
+            </p>
+
+            <a href="achievements.html"
+               class="view-achievement-btn">
+                🏆 XEM THÀNH TÍCH CỦA EM
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+    </main>
+
+
+    <!-- CHÂN TRANG -->
+    <footer class="home-footer">
+        <p>💙 TIN HỌC 3 – HỌC VUI MỖI NGÀY 💙</p>
+    </footer>
+
+
+    <!-- THÔNG BÁO -->
+    <div id="homeToast" class="home-toast"></div>
+
+</body>
+</html>

@@ -1,0 +1,818 @@
+
+/* =================================
+   TRANG CHỦ TIN HỌC 3
+================================= */
+
+.home-page {
+    background: #f1f7ff;
+    min-height: 100vh;
+    color: #294c70;
+}
+
+
+/* THANH ĐẦU TRANG */
+
+.home-header {
+    background: white;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 15px rgba(40, 90, 140, 0.07);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.home-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #246fbd;
+}
+
+.home-logo {
+    width: 48px;
+    height: 48px;
+    background: #e9f3ff;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-size: 27px;
+}
+
+.home-brand h1 {
+    font-size: 21px;
+    font-weight: 900;
+}
+
+.home-brand p {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #819bb5;
+    margin-top: 3px;
+}
+
+.header-student {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.student-avatar {
+    width: 43px;
+    height: 43px;
+    background: #fff0d5;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+}
+
+.student-header-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.student-header-info span {
+    color: #8b9eb2;
+    font-size: 11px;
+}
+
+.student-header-info strong {
+    color: #236bb3;
+    font-size: 14px;
+}
+
+.change-student-btn {
+    border: 1px solid #dceafb;
+    background: white;
+    color: #367fc1;
+    padding: 9px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 12px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* NỘI DUNG CHÍNH */
+
+.home-main {
+    width: min(1200px, 92%);
+    margin: 28px auto;
+}
+
+
+/* KHU VỰC CHÀO MỪNG */
+
+.hero-section {
+    background: linear-gradient(115deg, #217bd0, #55aaf0);
+    border-radius: 25px;
+    padding: 38px 45px;
+    min-height: 260px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-text {
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-label {
+    display: inline-block;
+    padding: 9px 15px;
+    background: rgba(255,255,255,0.18);
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.hero-text h2 {
+    font-size: 36px;
+    font-weight: 900;
+    margin-top: 20px;
+    line-height: 1.3;
+}
+
+.hero-text h2 span {
+    color: #ffe77d;
+}
+
+.hero-text p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: 10px;
+    max-width: 480px;
+}
+
+.hero-button {
+    display: inline-block;
+    text-decoration: none;
+    background: #ffdc69;
+    color: #79551a;
+    padding: 13px 22px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 900;
+    margin-top: 22px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.12);
+    transition: 0.25s;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* HÌNH MINH HỌA */
+
+.hero-picture {
+    width: 280px;
+    height: 210px;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.hero-circle {
+    width: 205px;
+    height: 205px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.18);
+    position: absolute;
+}
+
+.hero-computer {
+    font-size: 120px;
+    z-index: 2;
+    filter: drop-shadow(0 10px 8px rgba(0,0,0,0.15));
+}
+
+.hero-star {
+    position: absolute;
+    z-index: 3;
+}
+
+.star-a {
+    top: 8px;
+    left: 15px;
+    font-size: 30px;
+}
+
+.star-b {
+    right: 5px;
+    top: 40px;
+    font-size: 27px;
+}
+
+.star-c {
+    bottom: 8px;
+    right: 25px;
+    font-size: 35px;
+}
+
+
+/* THẺ THỐNG KÊ */
+
+.student-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 22px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 17px;
+    padding: 19px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    box-shadow: 0 4px 16px rgba(40,90,140,0.05);
+}
+
+.stat-icon {
+    width: 47px;
+    height: 47px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.xp-icon {
+    background: #fff4d7;
+}
+
+.level-icon {
+    background: #eee9ff;
+}
+
+.lesson-icon {
+    background: #e2f5ea;
+}
+
+.badge-icon {
+    background: #ffe9e9;
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stat-info span {
+    color: #899db2;
+    font-size: 11px;
+}
+
+.stat-info strong {
+    color: #286dad;
+    font-size: 19px;
+}
+
+
+/* TIẾN TRÌNH */
+
+.progress-section {
+    background: white;
+    border-radius: 18px;
+    padding: 22px 25px;
+    margin-top: 20px;
+    box-shadow: 0 4px 16px rgba(40,90,140,0.05);
+}
+
+.progress-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.progress-heading h3 {
+    font-size: 16px;
+    color: #286dad;
+}
+
+.progress-heading p {
+    font-size: 12px;
+    color: #91a3b5;
+    margin-top: 6px;
+}
+
+.progress-heading strong {
+    color: #edaa37;
+    font-size: 13px;
+}
+
+.progress-track {
+    width: 100%;
+    height: 13px;
+    background: #eaf1f8;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 18px;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #36b980, #84d9a7);
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+
+/* KHU VỰC CHỨC NĂNG */
+
+.learning-section {
+    margin-top: 35px;
+}
+
+.section-heading h2,
+.achievement-heading h2 {
+    font-size: 22px;
+    color: #286dad;
+}
+
+.section-heading p,
+.achievement-heading p {
+    color: #8a9fb4;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 17px;
+    margin-top: 20px;
+}
+
+.feature-card {
+    min-height: 215px;
+    border-radius: 19px;
+    padding: 22px 18px;
+    text-decoration: none;
+    color: #31516e;
+    position: relative;
+    overflow: hidden;
+    transition: 0.25s;
+    border: 1px solid transparent;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(40,90,140,0.12);
+}
+
+.lesson-card {
+    background: #e7f3ff;
+}
+
+.quiz-card {
+    background: #fff4dc;
+}
+
+.mouse-card {
+    background: #e6f7ed;
+}
+
+.typing-card {
+    background: #f0eaff;
+}
+
+.feature-illustration {
+    font-size: 43px;
+    margin-bottom: 15px;
+}
+
+.feature-tag {
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #6c91b4;
+}
+
+.feature-content h3 {
+    font-size: 16px;
+    margin-top: 7px;
+    line-height: 1.4;
+}
+
+.feature-content p {
+    font-size: 11px;
+    color: #8196aa;
+    margin-top: 7px;
+    line-height: 1.5;
+}
+
+.feature-arrow {
+    position: absolute;
+    right: 17px;
+    bottom: 15px;
+    font-size: 21px;
+    font-weight: 900;
+    color: #6595c2;
+}
+
+
+/* THÀNH TÍCH */
+
+.achievement-section {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    margin-top: 30px;
+    box-shadow: 0 4px 16px rgba(40,90,140,0.05);
+}
+
+.achievement-content {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: #fff8e8;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 18px;
+}
+
+.achievement-trophy {
+    width: 65px;
+    height: 65px;
+    border-radius: 18px;
+    background: #ffedbd;
+    display: grid;
+    place-items: center;
+    font-size: 37px;
+    flex-shrink: 0;
+}
+
+.achievement-content h3 {
+    color: #b07c24;
+    font-size: 15px;
+}
+
+.achievement-content p {
+    color: #a28e6d;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 6px;
+}
+
+
+/* THÔNG BÁO */
+
+.home-toast {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%, 100px);
+    opacity: 0;
+    background: #285d91;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 12px;
+    font-size: 13px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: 0.3s;
+    z-index: 200;
+    text-align: center;
+    max-width: 90%;
+}
+
+.home-toast.show {
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
+
+
+/* CHÂN TRANG */
+
+.home-footer {
+    padding: 25px 10px;
+    text-align: center;
+    color: #8ca6bf;
+    font-size: 12px;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 900px) {
+
+    .student-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-picture {
+        width: 210px;
+    }
+
+    .hero-computer {
+        font-size: 100px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .home-header {
+        padding: 12px 4%;
+    }
+
+    .home-brand h1 {
+        font-size: 17px;
+    }
+
+    .home-brand p {
+        font-size: 8px;
+    }
+
+    .home-logo {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+    }
+
+    .student-avatar {
+        width: 36px;
+        height: 36px;
+        font-size: 21px;
+    }
+
+    .student-header-info span {
+        font-size: 9px;
+    }
+
+    .student-header-info strong {
+        font-size: 11px;
+        max-width: 85px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .change-student-btn {
+        padding: 7px 8px;
+        margin-left: 0;
+        font-size: 10px;
+    }
+
+    .home-main {
+        width: 94%;
+        margin-top: 16px;
+    }
+
+    .hero-section {
+        padding: 25px 22px;
+        min-height: 260px;
+    }
+
+    .hero-picture {
+        position: absolute;
+        right: -45px;
+        bottom: -20px;
+        opacity: 0.35;
+    }
+
+    .hero-text h2 {
+        font-size: 28px;
+    }
+
+    .hero-label {
+        font-size: 9px;
+    }
+
+    .hero-text p {
+        font-size: 12px;
+        max-width: 280px;
+    }
+
+    .student-stats {
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 13px 10px;
+        gap: 8px;
+    }
+
+    .stat-icon {
+        width: 37px;
+        height: 37px;
+        font-size: 19px;
+    }
+
+    .stat-info span {
+        font-size: 9px;
+    }
+
+    .stat-info strong {
+        font-size: 15px;
+    }
+
+    .progress-section {
+        padding: 18px;
+    }
+
+    .progress-heading h3 {
+        font-size: 13px;
+    }
+
+    .progress-heading p {
+        font-size: 10px;
+    }
+
+    .section-heading h2,
+    .achievement-heading h2 {
+        font-size: 19px;
+    }
+
+    .feature-grid {
+        gap: 11px;
+    }
+
+    .feature-card {
+        min-height: 195px;
+        padding: 17px 13px;
+    }
+
+    .feature-illustration {
+        font-size: 36px;
+    }
+
+    .feature-content h3 {
+        font-size: 14px;
+    }
+
+    .feature-content p {
+        font-size: 10px;
+    }
+
+    .achievement-section {
+        padding: 18px;
+    }
+}
+
+
+
+/* ==================================
+   BỘ SƯU TẬP HUY CHƯƠNG
+================================== */
+
+.badges-section {
+    margin-top: 28px;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 5px 18px rgba(40, 100, 160, 0.08);
+}
+
+.badges-section .section-heading {
+    margin-bottom: 20px;
+}
+
+.badges-section .section-heading h2 {
+    color: #1769aa;
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.badges-section .section-heading p {
+    color: #718096;
+    font-size: 14px;
+}
+
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.badge-item {
+    padding: 20px 12px;
+    border-radius: 16px;
+    text-align: center;
+    border: 2px solid #e4edf7;
+    background: #f8fbff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.badge-item.earned {
+    background: linear-gradient(145deg, #fff9df, #fff0b8);
+    border-color: #f5cc55;
+}
+
+.badge-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 16px rgba(40, 100, 160, 0.12);
+}
+
+.badge-item-icon {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.badge-item.locked .badge-item-icon {
+    filter: grayscale(1);
+    opacity: 0.35;
+}
+
+.badge-item h3 {
+    color: #24557d;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.badge-item p {
+    color: #718096;
+    font-size: 12px;
+    line-height: 1.5;
+    min-height: 36px;
+}
+
+.badge-item span {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #e8eef5;
+    color: #718096;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.badge-item.earned span {
+    background: #ffe18a;
+    color: #875b00;
+}
+
+/* Hiển thị trên máy tính bảng */
+@media (max-width: 900px) {
+    .badges-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Hiển thị trên điện thoại */
+@media (max-width: 600px) {
+    .badges-section {
+        padding: 16px;
+    }
+
+    .badges-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .badge-item {
+        padding: 15px 8px;
+    }
+
+    .badge-item-icon {
+        font-size: 34px;
+    }
+}
+
+
+
+/* NÚT XEM THÀNH TÍCH */
+
+.view-achievement-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #2685d8, #1769aa);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(23, 105, 170, 0.18);
+    transition: 0.2s ease;
+}
+
+.view-achievement-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px rgba(23, 105, 170, 0.25);
+}
