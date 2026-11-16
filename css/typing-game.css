@@ -531,7 +531,7 @@ body:has(#typingFinish:not([hidden]))::before {
     pointer-events: none;
     overflow: hidden;
     z-index: 10001;
-    border: 3px solid red;
+    
     background: rgba(255, 0, 0, 0.05);
 }
 
