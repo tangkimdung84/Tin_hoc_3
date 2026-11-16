@@ -548,7 +548,6 @@ body:has(#typingFinish:not([hidden]))::before {
     height: 10px;
     border-radius: 50%;
     z-index: 2;
-
     animation: cloudFirework 1.4s ease-out forwards;
 }
 
